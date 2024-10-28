@@ -8,7 +8,7 @@ class Student
     {
         this.name="Unknown";
         this.age=0;
-        this.studentCount++;
+        studentCount++;
     }
     public Student(String name, int age)
     {
