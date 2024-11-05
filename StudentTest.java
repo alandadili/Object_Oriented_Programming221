@@ -23,6 +23,19 @@ class Student
         System.out.println("Total Number of Students : " +studentCount);
     
     }
+    @Override
+    public String toString()
+    {
+        return String.format("Student{name='%s', age=%d}", name, age);
+    }
+    @Override
+    public boolean equals(Object obj) 
+    {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Student student = (Student) obj;
+        return age == student.age && name.equals(student.name);
+    }
 }
 public class StudentTest 
 {
@@ -36,4 +49,5 @@ public class StudentTest
         student2.displayInfo();
     }
 }
+
 
