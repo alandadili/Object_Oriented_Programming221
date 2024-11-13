@@ -23,7 +23,7 @@ public class Homework_3
     {
         private int id;
         private String name;
-        //total++;    //counter for total employees (FIX LATER)
+        private static int totalEmployees = 0;
 
         //contructor here
         public Employee(int id, String name) 
@@ -76,6 +76,7 @@ public class Homework_3
     {
         String title;
         int salary;
+        private static int salariedEmployees = 0;
 
         //contructor here
         public Salaried(int id, String name, String title, int salary)
@@ -135,7 +136,8 @@ public class Homework_3
     {
         String position;
         double hourlyRate;
-
+        private static int hourlyEmployees = 0;
+        
         //contructor here
         public Hourly(int id, String name, String position, double hourlyRate)
         {
