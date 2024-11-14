@@ -1,7 +1,7 @@
 /**
  * @author Aland Adili
  * @version 11/13/2024
- * Main class that creates a list of employees and gives them a 10% raise
+ * Main class that creates a list of employees and gives them a 10% raise and tests the equals method
  */
 import java.util.Scanner;
 
@@ -74,7 +74,9 @@ public class Client
             }
             //no raise
             scanner.close();
+            System.out.println("");
             System.out.println("List of Employees - pre raise. ");
+            System.out.println("");
             for (int i = 0; i < employeeList.length; i++) 
             {
                 System.out.println(employeeList[i]);
@@ -110,7 +112,24 @@ public class Client
                 System.out.println(raisedEmployeeList[i]);
             }
             //cant figure out how to do equals method
+            testEqualsMethods();
         }
+        public static void testEqualsMethods() 
+            {
+                Salaried salaried1 = new Salaried(1, "Beth", "Manager", 60000);
+                Salaried salaried2 = new Salaried(1, "Anna", "CEO", 80100110);
+
+                Hourly hourly1 = new Hourly(3, "Robert", "Associate", 20);
+                Hourly hourly2 = new Hourly(3, "Lewis", "Intern", 12);
+                
+                System.out.println("");
+                
+                System.out.println("salaried1 equals salaried2= " + salaried1.equals(salaried2));
+                System.out.println("salaried1 equals salaried1= " + salaried1.equals(salaried1));
+
+                System.out.println("hourly1 equals hourly2= " + hourly1.equals(hourly2));
+                System.out.println("hourly1 equals hourly1= " + hourly1.equals(hourly1));
+            }
 
 /**
  * @author Aland Adili
